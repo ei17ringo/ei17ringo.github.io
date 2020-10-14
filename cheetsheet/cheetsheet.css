@@ -1,0 +1,22 @@
+body  {
+  background-color: #333;
+  color:#fff;
+}
+
+dl{
+  margin:20px;
+}
+
+dt{
+  font-size:24px;
+  font-weight: bold;
+}
+
+dd{
+  font-size:18px;
+  margin-bottom: 20px;
+}
+
+.red{
+  color: red;
+}
