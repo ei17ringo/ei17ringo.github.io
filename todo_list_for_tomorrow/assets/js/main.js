@@ -3,8 +3,8 @@ let data;
 let done;
 // もしデータが保存されていたら、取り出す、そうでなければ空っぽの配列を代入しておく
 // 取り出した中身があったら、trueと認識してくれる
-if (localStorage.getItem('todoList')){
-  data = JSON.parse(localStorage.getItem('todoList')); //データを取り出してdataに代入
+if (localStorage.getItem('todoDataList')){
+  data = JSON.parse(localStorage.getItem('todoDataList')); //データを取り出してdataに代入
 }else{
   data = [];
 }
@@ -45,7 +45,7 @@ let input_text = document.querySelector('#input').value;
     data.push(input_text);
 
     // 配列をローカルストレージに保存
-    localStorage.setItem('todoList',JSON.stringify(data));
+    localStorage.setItem('todoDataList',JSON.stringify(data));
 
     // 4.入力欄を空っぽにする
     document.querySelector('#input').value = '';
@@ -86,7 +86,7 @@ function add_li_tag(task_text,parent_class_name){
 
     // 削除ボタンの処理の設定
     i_tag_trash.addEventListener('click',function(){
-      click_btn_delete(this,'todoList');
+      click_btn_delete(this,'todoDataList');
     });
 
     div_button.appendChild(i_tag_check);
@@ -158,7 +158,7 @@ function click_btn_check(clicked_btn){
 
   clicked_btn.parentElement.parentElement.remove();
   // 削除済みの配列を全体的にローカルストレージに上書き保存
-  localStorage.setItem('todoList',JSON.stringify(data));
+  localStorage.setItem('todoDataList',JSON.stringify(data));
 }
 
 
