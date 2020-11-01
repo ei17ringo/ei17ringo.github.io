@@ -23,6 +23,11 @@ for (let displayText of data){
    add_li_tag(displayText,'.todo-list');
 }
 
+// 保存されたデータを、画面に表示する（Doneリスト）
+for (let displayTextDone of done){
+   add_li_tag(displayTextDone,'.done-list');
+}
+
 
 // Addボタン要素の取得
 let addBtn = document.querySelector('#btn');
